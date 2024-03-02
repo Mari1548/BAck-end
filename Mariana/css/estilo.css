@@ -1,0 +1,40 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-image: linear-gradient(to left, rgb(0, 0, 0), rgb(20, 52, 100));
+
+}
+.pcentral{
+    color: rgb(0, 0, 0);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-color: rgb(129, 141, 167);
+    padding: 15px;
+    border-radius: 20px;
+    width: 20%;
+}
+fieldset{
+    border: 3px solid rgb(8, 1, 73);
+}
+legend{
+    border: 3px solid rgb(43, 26, 134);
+    padding: 10px;
+    text-align: center;
+    background-color: black;
+    border-radius: 8px;
+}
+#submit{
+    color: rgb(255, 255, 255);
+    background-color: rgb(14, 38, 90);
+    padding: 20px;
+    border-radius: 10px;
+    width: 100%;
+    cursor: pointer;
+    font-size: 15px;
+    border: none;
+}
+p{
+    font-size: 30px;
+    color: rgb(7, 2, 41) ;
+}

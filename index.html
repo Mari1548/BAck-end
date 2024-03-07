@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade Avaliativa</title>
+    <link rel="stylesheet" href="/css/estilo.css">
+</head>
+<body>
+
+    <h1>Funções no PHP</h1>
+    
+       
+    <div class="abs">
+      <form action="php/abs.php" method="get">
+          <fieldset>
+              <p><b>ABS</b></p>
+              <p> Retorna o valor absoluto de um número. Esse valor é o número sem o seu sinal.</p>
+              <label>informe o valor para retornar o seu numero real:</label> <br>
+              <input type="number" name="abs" id="funcaojs">
+              <br><br>
+              <input type="submit" name="submit" id="submit">
+          </fieldset>
+      </form>
+      <br>
+    </div>
+
+
+      <div class="hypot">
+        <form action="php/hypot.php" method="get">
+            <fieldset>
+               <p><b>HIPOTENUSA</b></p>
+                <p> A hipotenusa é o lado mais longo de um triângulo retângulo, O teorema de Pitágoras determina que o 
+                  quadrado da medida da hipotenusa (c2) é igual à soma dos quadrados das medidas dos catetos (a2+b2).
+                   Portanto, a fórmula do teorema de Pitágoras é c2=a2+b2.</p>
+                <label>informe cateto1: </label> <br>
+                <input type="number" name="cat1" id="funcaojs">
+                <br><br>
+                <label >informe cateto 2: </label> <br>
+                <input type="number" name="cat2" id="funcaojs">
+                <br><br>
+                <input type="submit" name="submit" id="submit">
+            </fieldset>
+        </form>
+    </div>
+
+
+    <div class="base_convert">
+      <form action="php/base_convert.php" method="get">
+          <fieldset>
+              <p><b>CONVERSÃO DE BASE</b></p>
+              <p> Conversão de base numérica é a passagem da representação de um número de uma base numérica para outra,
+                 alterando a simbologia para se adequar à nova base. A base que normalmente usamos é a decimal ou base dez, 
+                 pois contém dez algarismos. O primeiro passo é realizar a divisão do número pelo número de sua base.</p>
+              <label>informe o valor inicial: </label> <br>
+              <input type="number" name="valor inicial" id="funcaojs">
+              <br><br>
+              <label >informe a base: </label> <br>
+              <input type="number" name="base" id="funcaojs">
+              <br><br>
+              <input type="submit" name="submit" id="submit">
+          </fieldset>
+      </form>
+  </div>
+
+
+      <br>
+      <div class="cosseno">
+        <form action="php/cos.php" method="get">
+            <fieldset>
+                <p><b>COSSENO</b></p>
+                <p> É relação do cateto adjacente com a hipotenusa, ou seja: Cos θ = cateto adjacente/hipotenusa.</p>
+                <label>Informe o cateto adjacente: </label> <br>
+                <input type="number" name="cateto adjacente" id="funcaojs">
+                <br><br>
+                <label >informe a hipotenusa </label> <br>
+                <input type="number" name="hipotenusa" id="funcaojs">
+                <br><br>
+                <input type="submit" name="submit" id="submit">
+            </fieldset>
+        </form>
+    </div>
+
+
+    <div class="intdiv">
+      <form action="php/intdiv.php" method="get">
+          <fieldset>
+              <p><b>DIVISÃO INTEIRA</b></p>
+              <p>Dados os números inteiros a e b (com b > 0), existem dois números inteiros q e r tais
+                que:
+                a = b. q + r (com r>0). 
+                </p>
+              <label>Informe o cateto adjacente: </label> <br>
+              <input type="number" name="" id="funcaojs">
+              <br><br>
+              <input type="submit" name="submit" id="submit">
+          </fieldset>
+      </form>
+  </div>
+
+  <div class="min">
+    <form action="php/intdiv.php" method="get">
+        <fieldset>
+            <p><b>MÍNIMO</b></p>
+            <p> retorna o valor mínimo entre os valores especificadas por um determinado conjunto de critérios ou condições.</p>
+            <label>Informe um valor:</label> <br>
+            <input type="number" name="valor 1" id="funcaojs">
+            <br><br>
+            <label>Informe um valor:</label> <br>
+            <input type="number" name="valor 2" id="funcaojs">
+            <br><br>
+            <input type="submit" name="submit" id="submit">
+        </fieldset>
+    </form>
+</div>
+
+<div class="max">
+  <form action="php/max.php" method="get">
+      <fieldset>
+          <p><b>MÁXIMO</b></p>
+          <p> Como o mínimo, retorna o valor máximo entre os valores especificadas por um determinado conjunto de critérios ou condições</p>
+          <label> </label> <br>
+          <label>Informe um valor:</label> <br>
+          <input type="number" name="valor 1" id="funcaojs">
+          <br><br>
+          <label>Informe um valor:</label> <br>
+          <input type="number" name="valor 2" id="funcaojs">
+          <br><br>
+          <input type="submit" name="submit" id="submit">
+      </fieldset>
+  </form>
+</div>
+
+
+<div class="pi">
+  <form action="php/pi.php" method="get">
+      <fieldset>
+          <p><b>PI</b></p>
+          <p> O número π(pi) é utilizado para cálculos envolvendo corpos circulares, como a área do círculo, o comprimento da circunferência,
+             o volume e a área de cilindros, cones, esferas, tronco de cone, entre outros sólidos geométricos.
+             O valor de Pi representa o cálculo da divisão entre o valor do perímetro e do diâmetro de um círculo,
+             isto é, π = perímetro/diâmetro. O perímetro de um círculo é a medida de sua volta (comprimento).
+          </p>
+          <label> </label> <br>
+          <label>Informe um perímetro:</label> <br>
+          <input type="number" name="perímetro" id="funcaojs">
+          <br><br>
+          <label>Informe um diametro:</label> <br>
+          <input type="number" name="diametro" id="funcaojs">
+          <br><br>
+          <input type="submit" name="submit" id="submit">
+      </fieldset>
+  </form>
+</div>
+      
+        
+
+     
+       
+pow() Facilita expressões exponenciais. A função pow() é uma forma eficeitne de semultiplicar números por eleas mesmos ( ou seus inversos) em grandes quantidades. Por exemplo , pow(3,5) é equivalente a expressão 3*3*3*3*3, e pow(3, -5) é equivalente à 1 / 3*3*3*3*3.
+
+      <a href="php/pow.php">pow</a>
+      <a href="php/sin.php">sin</a>
+    
+      
+      <a href="php/cos.php">cos</a>
+      <a href="php/tan.php">tan</a>
+      <a href="php/sqrt.php">sqrt</a>
+   
+</body>
+</html>   

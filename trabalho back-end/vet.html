@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agendamento de Consultas Veterinárias</title>
+    <link rel="stylesheet" href="css/trabalho.css">
+
+</head>
+<body>
+    <div class="container">
+        <h1>Bem-Vindo!</h1>
+        <button id="btn-entrar">Entrar</button>
+        <div class="form-container" id="cadastro-form">
+            <h2>Cadastro de Animal</h2>
+            <input type="text" id="nome-animal" placeholder="Nome do Animal">
+            <input type="text" id="nome-dono" placeholder="Nome do Dono">
+            <button id="btn-cadastrar" type="button">Cadastrar</button>
+        </div>
+        <div class="form-container" id="agendamento-form" style="display: none;">
+            <h2>Agendamento de Consulta</h2>
+            <select id="animal-selecionado">
+                <option value="" disabled selected>Selecione o animal</option>
+            </select>
+            <div class="time-slots">
+                
+                <div class="time-slot" data-time="09:00">09:00</div>
+                <div class="time-slot" data-time="10:00">10:00</div>
+                <div class="time-slot" data-time="11:00">11:00</div>
+                <div class="time-slot" data-time="12:00">12:00</div>
+                <div class="time-slot" data-time="13:00">13:00</div>
+                <div class="time-slot" data-time="14:00">14:00</div>
+                <div class="time-slot" data-time="15:00">15:00</div>
+                <div class="time-slot" data-time="16:00">16:00</div>
+            </div>
+            <button id="btn-agendar">Agendar</button>
+        </div>
+    </div>
+
+    <script>
+       
+        const animais = [
+            { nome: "Judith" },
+            { nome: "Rex" },
+            { nome: "Bob" }
+        ];
+
+       
+        const entrarBtn = document.getElementById('btn-entrar');
+        const cadastroForm = document.getElementById('cadastro-form');
+        const agendamentoForm = document.getElementById('agendamento-form');
+                const animalSelecionadoDropdown = document.getElementById('animal-selecionado');
+        const cadastrarBtn = document.getElementById('btn-cadastrar');
+        const agendarBtn = document.getElementById('btn-agendar');
+
+        entrarBtn.addEventListener('click', () => {
+            document.querySelector('.container > h1').style.display = 'none';
+            entrarBtn.style.display = 'none';
+            cadastroForm.style.display = 'block';
+        });
+
+        cadastrarBtn.addEventListener('click', () => {
+            const nomeAnimal = document.getElementById('nome-animal').value;
+            const nomeDono = document.getElementById('nome-dono').value;
+
+            
+            if (nomeAnimal && nomeDono) {
+                agendamentoForm.style.display = 'block';
+                cadastroForm.style.display = 'none';
+                animais.push({ nome: nomeAnimal }); 
+                atualizarDropdownAnimais();
+            } else {
+                alert('Por favor, preencha todos os campos.');
+            }
+        });
+
+        function atualizarDropdownAnimais() {
+            
+            animalSelecionadoDropdown.innerHTML = '<option value="" disabled selected>Selecione o animal</option>';
+           
+            animais.forEach(animal => {
+                const option = document.createElement('option');
+                option.value = animal.nome;
+                option.textContent = animal.nome;
+                animalSelecionadoDropdown.appendChild(option);
+            });
+        }
+
+        const timeSlots = document.querySelectorAll('.time-slot');
+
+        timeSlots.forEach(slot => {
+            slot.addEventListener('click', () => {
+                if (!slot.classList.contains('selected') && !slot.classList.contains('agendado')) {
+                    timeSlots.forEach(slot => {
+                        slot.classList.remove('selected');
+                    });
+                    slot.classList.add('selected');
+                }
+            });
+        });
+
+        agendarBtn.addEventListener('click', () => {
+            const selectedAnimal = animalSelecionadoDropdown.value;
+            const selectedSlot = document.querySelector('.time-slot.selected');
+
+            if (selectedAnimal && selectedSlot) {
+                const selectedTime = selectedSlot.getAttribute('data-time');
+                selectedSlot.classList.add('agendado');
+                alert(`Consulta agendada para o animal ${selectedAnimal} às ${selectedTime}`);
+                
+            } else {
+                alert('Por favor, selecione um animal e um horário.');
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,68 @@
+body {
+    background-color:  	#F5DEB3; 
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    text-align: center;
+    margin-top: 230px;
+}
+h1 {
+    margin-bottom: 20px;
+}
+.form-container {
+    display: none;
+    margin-top: 20px;
+    text-align: center;
+}
+input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+button {
+    padding: 10px 20px;
+    background-color: #4caf50; /* Verde */
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.time-slots {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 10px;
+    margin-top: 20px;
+}
+.time-slot {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    text-align: center;
+    cursor: pointer;
+}
+.time-slot.selected {
+    background-color: #b0c4de; /* Azul claro */
+}
+.time-slot.agendado {
+    background-color: #d3d3d3; /* Cinza */
+    pointer-events: none; /* Desativa a interação */
+}
